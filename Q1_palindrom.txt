@@ -1,0 +1,32 @@
+import java.util.*;
+class number{
+	Scanner sc=new Scanner(System.in);
+	int num,rev=0,rem,temp;
+    void Palindroma() {
+    System.out.println("Enter the Number : ");	
+	num=sc.nextInt();
+    temp=num;
+	while(num>0) {
+		rem=num%10;
+		rev=rev*10+rem;
+		num=num/10;
+	}
+    }
+}
+class palindrom extends number{
+	void display() {
+		if(temp==rev) {
+			System.out.println("The number "+ rev +" is Palindroma ");
+		}
+		else {
+			System.out.println("The number "+ temp +" is not Palindroma");
+		}
+	}
+}
+public class Multilevel {
+public static void main(String[] args) {
+	palindrom p=new palindrom();
+	p.Palindroma();
+	p.display();
+}
+}
